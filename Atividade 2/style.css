@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+}
+
+.filtered-image {
+    mix-blend-mode: hard-light;
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.game {
+    width: 750px;
+    height: 200px;
+    border: 1px solid white;
+    margin: auto;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#character {
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.animate {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% { bottom: 0px; }
+    30% { bottom: 50px; }
+    70% { bottom: 50px; }
+    100% { bottom: 0px; }
+}
+
+#block {
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 100%;
+    animation: block 3s infinite linear;
+}
+
+@keyframes block {
+    0% { left: 100%; }
+    100% { left: -20px; }
+}
+
+p {
+    text-align: center;
+    color: #0af7ff;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
